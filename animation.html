@@ -645,7 +645,7 @@
    
 
     <!-- Demo Section -->
-    <section id="demo" class="py-20 gradient-bg text-white">
+    <section id="demo-form" class="py-20 gradient-bg text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
@@ -961,6 +961,38 @@
                 });
             });
         });
+
+        document.getElementById("demo-form").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const status = document.getElementById("form-status");
+  const form = event.target;
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    company: form.company.value,
+    message: form.message.value,
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      status.textContent = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      status.textContent = "❌ An error occurred while sending.";
+    }
+  } catch (error) {
+    status.textContent = "❌ Could not connect to the server.";
+  }
+});
+
     </script>
 </body>
 </html>
