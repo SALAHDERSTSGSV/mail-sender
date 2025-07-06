@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailGenius AI - AI-Powered Cold Email Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+         
+   scroll-behavior: inherit;
+  
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0e0000 0%, #10B981 100%);
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card {
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(79, 70, 229, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .input-field {
+            transition: all 0.3s ease;
+            border: 1px solid #E5E7EB;
+        }
+        
+        .input-field:focus {
+            border-color: #4F46E5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4F46E5;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .getstarted{
+            background-color: #4F46E5;
+           font-weight: 500;
+          padding: 5px;
+          border-radius: 5px;
+          height: 75px;
+          width: ;
+
+             font-size: large;
+              
+
+        }
+   
+   .button-livedemo{
+                background-color: #4F46E5;
+           font-weight: 500;
+    width: 150px;
+      
+
+             font-size: large;
+
+
+   }
+   .logoEMAIL{
+    width: 50px;
+    font-weight: 500;
+ 
+
+   }
+       
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Navigation -->
+    <nav class=" bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="ChatGPT Image Jul 3, 2025, 10_36_56 PM.png" class="logoEMAIL">
+                       
+                        <span class="text-xl font-bold text-primary">Coldcraft AI</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#features" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#how-it-works" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">How It Works</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Pricing</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#demo" class="hidden md:block bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Demo</a>
+                    <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+<section class="gradient-bg hero-pattern text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0">
+        
+        <!-- Left Content -->
+        <div class="md:w-1/2">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">AI-Powered Cold Email Outreach</h1>
+            <p class="text-lg opacity-90 mb-8">MailGenius AI helps you write and send high-converting emails that get replies — fast and automatically.</p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<a href="#pricing"
+   class="bg-white text-primary hover:bg-gray-100 active:bg-indigo-600 active:text-white px-6 py-3 rounded-md text-lg font-semibold transition duration-200">
+   Get Started
+</a>
+
+
+                <a class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md text-lg font-semibold transition duration-300">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="md:w-1/2 relative">
+            <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-3">AI</div>
+                        <div>
+                            <p class="font-semibold">Coldcraft AI</p>
+                            <p class="text-xs text-gray-500">AI Email Assistant</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">Hi [First Name],</p>
+                    <p class="mb-4">I noticed [Company Name] is doing impressive work in [Industry]. We've helped similar companies increase their [specific metric] by [X]%.</p>
+                    <p class="mb-4">Would you be open to a quick 15-minute call next week to explore how we might help [Company Name] achieve similar results?</p>
+                    <p>Best regards,<br>[Your Name]</p>
+                </div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-secondary opacity-20"></div>
+            <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-primary opacity-20"></div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-primary mb-2">5x</div>
+                    <p class="text-gray-600">Higher response rates</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-secondary mb-2">98%</div>
+                    <p class="text-gray-600">Open rate accuracy</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-primary mb-2">1k+</div>
+                    <p class="text-gray-600">Emails analyzed daily</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-secondary mb-2">24/7</div>
+                    <p class="text-gray-600">AI optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Powerful Features for Cold Email Success</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our AI-powered platform provides everything you need to create, send, and optimize high-converting cold email campaigns.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI-Powered Personalization</h3>
+                    <p class="text-gray-600">Our AI analyzes LinkedIn profiles, company data, and past interactions to craft hyper-personalized emails that feel human.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
+                    <p class="text-gray-600">Real-time A/B testing and performance tracking to continuously improve your email effectiveness.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-envelope-open-text text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smart Follow-ups</h3>
+                    <p class="text-gray-600">Automated follow-up sequences triggered by recipient behavior to maximize response rates.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Inbox Protection</h3>
+                    <p class="text-gray-600">Advanced algorithms to prevent spam flags and ensure your emails reach the primary inbox.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-database text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lead Intelligence</h3>
+                    <p class="text-gray-600">Automated research on prospects to uncover talking points that drive engagement.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm card-hover">
+                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Team Collaboration</h3>
+                    <p class="text-gray-600">Shared templates, comments, and approval workflows for sales teams of any size.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">How Coldcraft AI Works</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Transform your cold outreach in just three simple steps.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-primary bg-opacity-10 text-primary w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Connect Your Data</h3>
+                    <p class="text-gray-600 mb-6">Integrate with your CRM, LinkedIn, or upload a CSV. Our AI analyzes your best-performing emails to learn your voice and style.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Automated lead enrichment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Historical performance analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Custom audience segmentation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="bg-gray-100 rounded-xl p-6 shadow-inner">
+                        <div class="flex items-center mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-cloud-upload-alt text-primary text-2xl mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Data Integration</p>
+                                    <p class="text-xs text-gray-500">Connecting your sources</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-3">
+                                        <i class="fas fa-link text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium">CRM Integration</p>
+                                        <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                            <div class="bg-primary h-1.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-3">
+                                        <i class="fab fa-linkedin text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium">LinkedIn Sync</p>
+                                        <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                            <div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-3">
+                                        <i class="fas fa-file-csv text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm font-medium">CSV Upload</p>
+                                        <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                            <div class="bg-primary h-1.5 rounded-full" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16">
+                <div class="md:w-1/2 order-2 md:order-1 mb-10 md:mb-0">
+                    <div class="bg-primary bg-opacity-10 text-primary w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Generates Perfect Emails</h3>
+                    <p class="text-gray-600 mb-6">Our AI crafts personalized emails using proven templates, your brand voice, and insights from millions of successful campaigns.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Subject line optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Personalized opening lines</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Value proposition tuning</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 md:pr-10">
+                    <div class="bg-gray-100 rounded-xl p-6 shadow-inner">
+                        <div class="flex items-center mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="ChatGPT Image Jul 3, 2025, 10_36_56 PM.png" class="logoEMAIL">
+                                <div>
+                                    <p class="font-semibold">Email Generation</p>
+                                    <p class="text-xs text-gray-500">AI at work</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm font-medium mb-1">Subject Line:</p>
+                                    <div class="bg-gray-100 p-3 rounded">Quick question about [Company's Recent Achievement]</div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium mb-1">Personalization:</p>
+                                    <div class="bg-gray-100 p-3 rounded">Hi [First Name], I noticed your recent work on [Specific Project]...</div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium mb-1">Value Prop:</p>
+                                    <div class="bg-gray-100 p-3 rounded">We helped [Similar Company] achieve [X]% improvement in [Relevant Metric]...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-primary bg-opacity-10 text-primary w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Send & Optimize</h3>
+                    <p class="text-gray-600 mb-6">Launch campaigns with confidence. Our AI continuously tests and optimizes every element for maximum performance.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Automated A/B testing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Real-time performance analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Smart follow-up sequencing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="bg-gray-100 rounded-xl p-6 shadow-inner">
+                        <div class="flex items-center mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-rocket text-primary text-2xl mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Campaign Dashboard</p>
+                                    <p class="text-xs text-gray-500">Performance tracking</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <p class="text-2xl font-bold text-primary">42%</p>
+                                        <p class="text-xs text-gray-500">Open Rate</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-bold text-secondary">18%</p>
+                                        <p class="text-xs text-gray-500">Reply Rate</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-bold text-primary">9%</p>
+                                        <p class="text-xs text-gray-500">Conversion</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium mb-2">Top Performing Elements:</p>
+                                    <div class="space-y-2">
+                                        <div class="flex items-center">
+                                            <div class="w-2 h-2 rounded-full bg-secondary mr-2"></div>
+                                            <span class="text-sm">Subject Line A (27% higher opens)</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="w-2 h-2 rounded-full bg-secondary mr-2"></div>
+                                            <span class="text-sm">Personalized intro (41% more replies)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Choose the plan that fits your outreach needs. Scale up or down as your business grows.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-sm p-8 card-hover">
+                    <h3 class="text-xl font-bold mb-4">Starter</h3>
+                    <p class="text-gray-600 mb-6">Perfect for individuals and small teams</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$59</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>500 AI-generated emails/month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Basic personalization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>3 email sequences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Performance analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-gray-100 hover:bg-gray-200 text-dark text-center font-medium py-3 px-4 rounded-md transition duration-300">Get Started</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg border-2 border-primary p-8 transform scale-105 card-hover relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
+                    <h3 class="text-xl font-bold mb-4">Professional</h3>
+                    <p class="text-gray-600 mb-6">Ideal for growing sales teams</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$199</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>2,000 AI-generated emails/month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Advanced personalization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>10 email sequences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Smart follow-ups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>CRM integrations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-primary hover:bg-indigo-700 text-white text-center font-medium py-3 px-4 rounded-md transition duration-300">Get Started</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-8 card-hover">
+                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large-scale outreach operations</p>
+
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$299</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>10,000 AI-generated emails/month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Hyper-personalization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Unlimited sequences</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                              <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Best for enterprise-scale automation</span>
+                      
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>API access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Custom AI models</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full bg-gray-100 hover:bg-gray-200 text-dark text-center font-medium py-3 px-4 rounded-md transition duration-300">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-sm p-8 max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold mb-6 text-center">Need something custom?</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <p class="text-gray-600">We offer custom plans for businesses with unique requirements, including volume discounts and white-label solutions.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <a href="#contact" class="block w-full md:w-auto bg-primary hover:bg-indigo-700 text-white text-center font-medium py-3 px-6 rounded-md transition duration-300">Request Custom Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">See MailGenius AI in Action</h2>
+                    <p class="text-xl opacity-90 mb-8">Get a personalized demo and see how our AI can transform your cold outreach. Our experts will walk you through the platform and answer all your questions.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 rounded-full p-2 mr-4">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            
+             <div>
+                                <h4 class="font-bold mb-2">Watch Demo Video</h4>
+                                <p class="opacity-80">See how MailGenius AI works in just 2 minutes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 rounded-full p-2 mr-4">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Schedule Live Demo</h4>
+                                <p class="opacity-80">Get a personalized walkthrough from our team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Request a Demo</h3>
+                        <form >
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg input-field bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-opacity-100 focus:ring-0" placeholder="Your name">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg input-field bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-opacity-100 focus:ring-0" placeholder="you@company.com">
+                            </div>
+                            <div class="mb-6">
+                                <label for="company" class="block text-sm font-medium mb-2">Company</label>
+                                <input type="text" id="company" class="w-full px-4 py-3 rounded-lg input-field bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-opacity-100 focus:ring-0" placeholder="Company name">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium mb-2">What would you like to learn about?</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg input-field bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-opacity-100 focus:ring-0" placeholder="Tell us about your needs"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-white text-primary hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition duration-300">Request Demo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Everything you need to know about MailGenius AI and cold email outreach.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <button class="flex items-center justify-between w-full text-left">
+                            <h3 class="text-lg font-medium">How does the AI create better cold emails?</h3>
+                            <i class="fas fa-chevron-down text-primary"></i>
+                        </button>
+                        <div class="mt-4 text-gray-600">
+                            <p>Our AI has been trained on millions of successful cold email campaigns across industries. It analyzes patterns in subject lines, messaging structure, personalization techniques, and call-to-actions that consistently perform well. For each email, it combines these insights with specific data about your prospect to craft a message optimized for response.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <button class="flex items-center justify-between w-full text-left">
+                            <h3 class="text-lg font-medium">Can I customize the AI's output?</h3>
+                            <i class="fas fa-chevron-down text-primary"></i>
+                        </button>
+                        <div class="mt-4 text-gray-600">
+                            <p>Absolutely. You can set brand voice parameters, preferred email length, level of formality, and specific value propositions to emphasize. The AI will adapt to your preferences while still applying its optimization techniques. You can also edit any email before sending.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <button class="flex items-center justify-between w-full text-left">
+                            <h3 class="text-lg font-medium">How do you ensure emails don't get marked as spam?</h3>
+                            <i class="fas fa-chevron-down text-primary"></i>
+                        </button>
+                        <div class="mt-4 text-gray-600">
+                            <p>Our system includes multiple safeguards: natural language patterns that avoid spam triggers, optimal sending frequency recommendations, domain warming protocols, and content scoring that flags potentially problematic elements. We also monitor deliverability metrics across all our customers to continuously improve our algorithms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <button class="flex items-center justify-between w-full text-left">
+                            <h3 class="text-lg font-medium">What integrations do you support?</h3>
+                            <i class="fas fa-chevron-down text-primary"></i>
+                        </button>
+                        <div class="mt-4 text-gray-600">
+                            <p>MailGenius AI integrates with all major CRMs (Salesforce, HubSpot, Pipedrive, etc.), email providers (Gmail, Outlook, etc.), LinkedIn, and Zapier for connecting with thousands of other apps. We also offer a robust API for custom integrations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <button class="flex items-center justify-between w-full text-left">
+                            <h3 class="text-lg font-medium">Is there a free trial available?</h3>
+                            <i class="fas fa-chevron-down text-primary"></i>
+                        </button>
+                        <div class="mt-4 text-gray-600">
+                            <p>Yes, we offer a 14-day free trial with access to all features (limited to 100 emails). No credit card required. This gives you plenty of time to test the platform and see the results for yourself.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">Still have questions? We're happy to help.</p>
+                    <a href="#contact" class="inline-block bg-primary hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-md transition duration-300">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions about MailGenius AI or want to discuss how it can work for your specific needs? Our team is here to help.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-lg p-3 mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-600">hello@mailgenius.ai</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-lg p-3 mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                                      <div class="mt-10">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                              
+
+
+                      
+                    
+       
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="contact-name" class="block text-sm font-medium mb-2">Name</label>
+                                    <input type="text" id="contact-name" class="w-full px-4 py-3 rounded-lg input-field" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="block text-sm font-medium mb-2">Email</label>
+                                    <input type="email" id="contact-email" class="w-full px-4 py-3 rounded-lg input-field" placeholder="you@company.com">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="contact-subject" class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="contact-subject" class="w-full px-4 py-3 rounded-lg input-field" placeholder="How can we help?">
+                            </div>
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-3 rounded-lg input-field" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- CTA Section -->
+    <section class="gradient-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to Transform Your Cold Outreach?</h2>
+            <p class="text-xl text-white opacity-90 mb-8 max-w-3xl mx-auto">Join thousands of businesses using MailGenius AI to book more meetings and close more deals.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#pricing" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition duration-300">Get Started Now</a>
+                <a href="#demo" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-md text-lg font-semibold text-white transition duration-300">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-primary">MailGenius AI</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">The most advanced AI platform for cold email outreach. Get more replies, book more meetings, and close more deals.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+          
+                    
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition duration-300">Demo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">API Docs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 MailGenius AI. All rights reserved.</p>
+                <div class="flex space-x-6">
+        <a href="privacy_styled.html">Privacy Policy</a>
+<a href="terms_styled.html">Terms of Service</a>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for FAQ accordion
+        document.querySelectorAll('.bg-white.rounded-xl.shadow-sm.p-6 button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
