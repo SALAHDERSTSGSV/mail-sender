@@ -15,31 +15,49 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'hdvkkr@gmail.com',          // Your email
-    pass: 'qzxl vvsh ukql qbgb'        // App password from Gmail
+    user: 'hdvkkr@gmail.com',          // بريدك
+    pass: 'qzxl vvsh ukql qbgb'        // كلمة مرور التطبيق (App Password)
   }
 });
 
-// Handle form data
+// Unified /send route for both forms
 app.post('/send', (req, res) => {
-  const { name, email, company, message } = req.body;
+  const { name, email, subject, company, message } = req.body;
+
+  console.log("📨 Request received:", req.body);
+
+  if (!name || !email || !message) {
+    return res.status(400).send("❌ Missing required fields");
+  }
+
+  // Use subject if available, otherwise default to a demo/contact label
+  const emailSubject = subject 
+    ? subject 
+    : company 
+      ? `📩 Demo Request from ${name}` 
+      : `📩 Contact Message from ${name}`;
+
+  // Construct email body dynamically
+  const emailBody = `
+    Name: ${name}
+    Email: ${email}
+    ${company ? `Company: ${company}` : ""}
+    ${subject ? `Subject: ${subject}` : ""}
+    Message:
+    ${message}
+  `;
 
   const mailOptions = {
     from: email,
     to: 'hdvkkr@gmail.com',
-    subject: `📩 Demo request from: ${name}`,
-    text: `
-      Name: ${name}
-      Email: ${email}
-      Company: ${company}
-      Message: ${message}
-    `
+    subject: emailSubject,
+    text: emailBody
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('❌ Error sending email:', error);
-      res.status(500).send('Failed to send the email.');
+      return res.status(500).send('Failed to send the email.');
     } else {
       console.log('✅ Email sent:', info.response);
       res.status(200).send('Email sent successfully.');
