@@ -1,6 +1,5 @@
 console.log("Starting server...");
 
-
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -8,23 +7,19 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-;
 
-// Middleware setup
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Nodemailer setup - using Gmail
 const transporter = nodemailer.createTransport({
   service: 'gmail',
-auth: {
-  user: process.env.EMAIL_USER,
-  pass: process.env.EMAIL_PASS
-}
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
 });
 
-// Unified /send route for both forms
 app.post('/send', (req, res) => {
   const { name, email, subject, company, message } = req.body;
 
@@ -34,14 +29,12 @@ app.post('/send', (req, res) => {
     return res.status(400).send("❌ Missing required fields");
   }
 
-  // Use subject if available, otherwise default to a demo/contact label
-  const emailSubject = subject 
-    ? subject 
-    : company 
-      ? `📩 Demo Request from ${name}` 
+  const emailSubject = subject
+    ? subject
+    : company
+      ? `📩 Demo Request from ${name}`
       : `📩 Contact Message from ${name}`;
 
-  // Construct email body dynamically
   const emailBody = `
     Name: ${name}
     Email: ${email}
@@ -53,7 +46,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'hdvkkr@gmail.com',
+    to: process.env.EMAIL_USER,
     subject: emailSubject,
     text: emailBody
   };
@@ -69,7 +62,6 @@ app.post('/send', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
