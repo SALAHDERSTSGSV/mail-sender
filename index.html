@@ -119,21 +119,62 @@
         }
    
    .button-livedemo{
-                background-color: #4F46E5;
-           font-weight: 500;
-    width: 150px;
-      
 
-             font-size: large;
+  background-color: white;
+  color: #4F46E5; /* هذا هو اللون الافتراضي لـ 'text-primary' في Tailwind */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  transition: background-color 0.3s; /* transition duration-300 */
+}
 
+.button-livedemo:hover {
+  background-color: #4F46E5; /* hover:bg-gray-100 */
+  color: white;
+}
 
-   }
+           
+             .button-getstarted{
+                
+  background-color: white;
+  color: #4F46E5; /* هذا هو اللون الافتراضي لـ 'text-primary' في Tailwind */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  transition: background-color 0.3s; /* transition duration-300 */
+}
+
+.button-getstarted:hover {
+  background-color: #4F46E5; /* hover:bg-gray-100 */
+  color: white;
+}
+
+          
+
+         
    .logoEMAIL{
     width: 50px;
     font-weight: 500;
  
 
    }
+   .TEXTREACH {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #000000;
+  text-shadow: 0 2px 4px#4F46E5;
+}
+   .TEXTREACH2 {
+
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #030303;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
        
     </style>
 </head>
@@ -158,7 +199,8 @@
                     <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
                 </div>
                 <div class="flex items-center">
-                    <a href="#demo" class="hidden md:block bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Demo</a>
+                  <a href="#demo-form" class="hidden md:block bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Demo</a>
+
                     <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -172,16 +214,13 @@
         
         <!-- Left Content -->
         <div class="md:w-1/2">
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">AI-Powered Cold Email Outreach</h1>
-            <p class="text-lg opacity-90 mb-8">Coolaimy AI helps you write and send high-converting emails that get replies — fast and automatically.</p>
+            <h1 class="TEXTREACH" >AI-Powered Cold Email Outreach</h1>
+            <p class="TEXTREACH2">Coolaimy AI helps you write and send high-converting emails that get replies — fast and automatically.</p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-<a href="#pricing"
-   class="bg-white text-primary hover:bg-gray-100 active:bg-indigo-600 active:text-white px-6 py-3 rounded-md text-lg font-semibold transition duration-200">
-   Get Started
-</a>
+<a href="#pricing"class="button-getstarted">Get Started</a>
 
+<a href="#demo-form" class="button-livedemo">Live Demo</a>
 
-                <a class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md text-lg font-semibold transition duration-300">Live Demo</a>
             </div>
         </div>
 
@@ -801,36 +840,22 @@
             </div>
             <div>
               <h4 class="font-bold mb-1">Email Us</h4>
-              <p class="text-gray-600">hello@mailgenius.ai</p>
+              <p class="text-gray-600">admin@coolaimy.online</p>
             </div>
           </div>
-
-          <div class="flex items-start">
+             <div class="flex items-start">
             <div class="bg-primary bg-opacity-10 text-primary rounded-lg p-3 mr-4">
               <i class="fas fa-phone-alt text-xl"></i>
             </div>
             <div>
               <h4 class="font-bold mb-1">Call Us</h4>
-              <p class="text-gray-600">+1 (555) 123-4567</p>
+              <p class="text-gray-600">+213 6 56 62 86 98</p>
             </div>
           </div>
 
-          <div class="mt-10">
-            <h4 class="font-bold mb-4">Follow Us</h4>
-            <div class="flex space-x-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition duration-300">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+       
+
+        
 
       <!-- Right Column: Contact Form -->
       <div class="lg:w-1/2">
@@ -872,7 +897,7 @@
             <p class="text-xl text-white opacity-90 mb-8 max-w-3xl mx-auto">Join thousands of businesses using Coolaimy AI to book more meetings and close more deals.</p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <a href="#pricing" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold transition duration-300">Get Started Now</a>
-                <a href="#demo" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-md text-lg font-semibold text-white transition duration-300">Schedule a Demo</a>
+                <a href="#demo-form" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-md text-lg font-semibold text-white transition duration-300">Schedule a Demo</a>
             </div>
         </div>
     </section>
@@ -887,16 +912,7 @@
                         <span class="text-xl font-bold text-primary">Coolaimy AI</span>
                     </div>
                     <p class="text-gray-400 mb-6">The most advanced AI platform for cold email outreach. Get more replies, book more meetings, and close more deals.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                   
           
                     
                     </div>
