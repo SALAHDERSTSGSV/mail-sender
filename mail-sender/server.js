@@ -14,10 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Nodemailer setup - using Gmail
 const transporter = nodemailer.createTransport({
   service: 'gmail',
-  auth: {
-    user: 'hdvkkr@gmail.com',          // بريدك
-    pass: 'qzxl vvsh ukql qbgb'        // كلمة مرور التطبيق (App Password)
-  }
+auth: {
+  user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS
+}
 });
 
 // Unified /send route for both forms
